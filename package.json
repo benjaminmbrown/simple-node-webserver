@@ -1,0 +1,20 @@
+{
+  "name": "simple-node-webserver",
+  "version": "1.0.0",
+  "description": "A very simple webserver in node",
+  "main": "simple-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start" : "simple-server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benjaminmbrown/simple-node-webserver.git"
+  },
+  "author": "Benjamin M. Brown",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/benjaminmbrown/simple-node-webserver/issues"
+  },
+  "homepage": "https://github.com/benjaminmbrown/simple-node-webserver#readme"
+}
