@@ -17,17 +17,21 @@ http.createServer(function(req,res){
 	var uri = url.parse(req.url).pathname;
 	//process.cwd returns the current working directory of the process
 	var fileName = path.join(process.cwd(),unescape(uri));
-	console.log('loading the file from uri: '+ uri);
+	console.log('loading the file from uri:'+ uri);
 
 	var stats;
 
 	//Look for the local file that matches the uri 
-
+console.log('trying to sync filesystem');
 	try{
 		//look for filename in system
+		console.log('in try');
 		stats = fileSystem.lstatSync(fileName);
+		console.log(stats);
 
 	}catch(e){
+		
+		e.log('couldnot sync');
 		//if file's not here, send 404 error
 		res.writeHead(404, {'Content-Type':'text/plain'});
 		res.write('404 Not Found');
